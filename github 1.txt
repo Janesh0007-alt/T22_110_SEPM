@@ -1,0 +1,121 @@
+Janesh@Dell MINGW64 ~/OneDrive/Documents/SEM 6 LAB WORK/SEPM
+$ mkdir git-dvcs
+
+Janesh@Dell MINGW64 ~/OneDrive/Documents/SEM 6 LAB WORK/SEPM
+$ cd git-dvcs/
+
+Janesh@Dell MINGW64 ~/OneDrive/Documents/SEM 6 LAB WORK/SEPM/git-dvcs
+$ git config –global
+error: key does not contain a section: –global
+
+Janesh@Dell MINGW64 ~/OneDrive/Documents/SEM 6 LAB WORK/SEPM/git-dvcs
+$ git config --global user.name "Janesh"
+
+Janesh@Dell MINGW64 ~/OneDrive/Documents/SEM 6 LAB WORK/SEPM/git-dvcs
+$ git config --global user.email "firefox9819@gmail.com"
+
+Janesh@Dell MINGW64 ~/OneDrive/Documents/SEM 6 LAB WORK/SEPM/git-dvcs
+$ git config --global --list
+user.name=Janesh
+user.emal=firefox9819@gmail.com
+user.email=firefox9819@gmail.com
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+
+Janesh@Dell MINGW64 ~/OneDrive/Documents/SEM 6 LAB WORK/SEPM/git-dvcs
+$ cd ..
+
+Janesh@Dell MINGW64 ~/OneDrive/Documents/SEM 6 LAB WORK/SEPM
+$ mkdir git-demo-project
+
+Janesh@Dell MINGW64 ~/OneDrive/Documents/SEM 6 LAB WORK/SEPM
+$ cd
+git-demo-project/ git-dvcs/         README.md
+
+Janesh@Dell MINGW64 ~/OneDrive/Documents/SEM 6 LAB WORK/SEPM
+$ cd git-demo-project/
+
+Janesh@Dell MINGW64 ~/OneDrive/Documents/SEM 6 LAB WORK/SEPM/git-demo-project
+$ git init
+Initialized empty Git repository in C:/Users/Dell/OneDrive/Documents/SEM 6 LAB WORK/SEPM/git-demo-project/.git/
+
+Janesh@Dell MINGW64 ~/OneDrive/Documents/SEM 6 LAB WORK/SEPM/git-demo-project (master)
+$ git add .
+
+Janesh@Dell MINGW64 ~/OneDrive/Documents/SEM 6 LAB WORK/SEPM/git-demo-project (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   README.md
+
+
+Janesh@Dell MINGW64 ~/OneDrive/Documents/SEM 6 LAB WORK/SEPM/git-demo-project (master)
+$ git commit -m "First Commit"
+[master (root-commit) 02af20b] First Commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README.md
+
+Janesh@Dell MINGW64 ~/OneDrive/Documents/SEM 6 LAB WORK/SEPM/git-demo-project (master)
+$ git log
+commit 02af20b8bd517849f6763b1b37e92578a6c789e7 (HEAD -> master)
+Author: Janesh <firefox9819@gmail.com>
+Date:   Fri Jan 23 13:40:15 2026 +0530
+
+    First Commit
+
+Janesh@Dell MINGW64 ~/OneDrive/Documents/SEM 6 LAB WORK/SEPM/git-demo-project (master)
+$ git log --oneline
+02af20b (HEAD -> master) First Commit
+
+Janesh@Dell MINGW64 ~/OneDrive/Documents/SEM 6 LAB WORK/SEPM/git-demo-project (master)
+$ git remote add origin https://github.com/Janesh/git-demo-project.git
+
+Janesh@Dell MINGW64 ~/OneDrive/Documents/SEM 6 LAB WORK/SEPM/git-demo-project (master)
+$ git remote show origin
+* remote origin
+  Fetch URL: https://github.com/Janesh/git-demo-project.git
+  Push  URL: https://github.com/Janesh/git-demo-project.git
+  HEAD branch: (unknown)
+
+Janesh@Dell MINGW64 ~/OneDrive/Documents/SEM 6 LAB WORK/SEPM/git-demo-project (master)
+$
+
+Janesh@Dell MINGW64 ~/OneDrive/Documents/SEM 6 LAB WORK/SEPM/git-demo-project (master)
+$ git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 212 bytes | 212.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Janesh/git-demo-project.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+Janesh@Dell MINGW64 ~/OneDrive/Documents/SEM 6 LAB WORK/SEPM/git-demo-project (master)
+$ git pull
+Already up to date.
+
+Janesh@Dell MINGW64 ~/OneDrive/Documents/SEM 6 LAB WORK/SEPM/git-demo-project (master)
+$ git fetch
+
+Janesh@Dell MINGW64 ~/OneDrive/Documents/SEM 6 LAB WORK/SEPM/git-demo-project (master)
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 1005 bytes | 77.00 KiB/s, done.
+From https://github.com/Janesh/git-demo-project
+   02af20b..564eff1  master     -> origin/master
+Updating 02af20b..564eff1
+Fast-forward
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+
+Janesh@Dell MINGW64 ~/OneDrive/Documents/SEM 6 LAB WORK/SEPM/git-demo-project (master)
+$
